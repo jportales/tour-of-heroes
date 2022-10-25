@@ -2,5 +2,6 @@
 <div><span>id: </span>{{hero.id}}</div>
 <div>
     <label for="name">Hero name: </label>
-    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+    <input id="name" [(ngModel)]="hero.name"  placeholder="name">
 </div>
+<app-label [(text)]="hero.name"></app-label>
