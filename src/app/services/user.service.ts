@@ -17,13 +17,12 @@ export class UserService {
     return this.http.get<User[]>(url);
   }
   
-//  getUsersPromise(): Promise<User[]> { 
-//    const url = 'https://jsonplaceholder.typicode.com/users';
-//    return this.http.get<User[]>(url).toPromise();
-//  }
+  getUsersPromise(): Promise<User[]> { 
+    const url = 'https://jsonplaceholder.typicode.com/users';
+    return firstValueFrom(this.http.get<User[]>(url));
+  }
 
-//ES IGUAL QUE EL DE arriba, lo único, que cambia su estructura para hacerlo más limpio
-   getUsersPromise(): Promise<User[]> {     
+   getUsersPromiseAsync(): Promise<User[]> {     
      const url = 'https://jsonplaceholder.typicode.com/users';
      return firstValueFrom(this.http.get<User[]>(url));
    }

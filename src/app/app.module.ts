@@ -9,13 +9,15 @@ import { LabelComponent } from './label/label.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
     LabelComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
