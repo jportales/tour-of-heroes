@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../hero';
 import { HeroService } from '../services/hero.service';
+import { heroTypeNames } from '../constants/hero.constants';
 
 @Component({
   selector: 'app-heroes',
@@ -11,6 +12,7 @@ import { HeroService } from '../services/hero.service';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = [];
+  heroTypeNames = heroTypeNames;
 
 constructor(private heroeService: HeroService) { }
 

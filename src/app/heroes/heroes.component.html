@@ -3,10 +3,16 @@
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </a>
-  </li>
+      <span class="badge">{{hero.id}}</span> {{hero.name}} -
+      <!-- <span *ngIf="hero.typeId"> - {{heroTypeNames[hero.typeId]}}</span> -->
+      <app-hero-type [typeId]="hero.typeId"> </app-hero-type>
+      <!-- <app-hero-type [typeId]="hero.typeId?"> </app-hero-type>            ESTE VA CON  @Input() typeId: number-->  
+    </a>  
+  </li> 
 </ul>
+
+
+
 
 
 <!--
