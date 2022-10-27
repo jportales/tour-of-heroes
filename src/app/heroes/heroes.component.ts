@@ -1,11 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../hero';
-import { User } from '../models/user.model';
-import { UserService } from '../services/user.service';
 import { HeroService } from '../services/hero.service';
-import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-heroes',
@@ -15,23 +11,11 @@ import { MessageService } from '../services/message.service';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = [];
-  selectedHero: Hero;
-  users: User[];
 
-  // hero: Hero = {
-  //   id: 1,
-  //   name: 'Winstorm'
-  // };
-
-constructor(private heroeService: HeroService, private messageService: MessageService) { }
+constructor(private heroeService: HeroService) { }
 
    ngOnInit(): void {
     this.getHeroes();
-   }
-
-   onSelect(hero: Hero):void{
-     this.selectedHero = hero;
-     this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
    }
 
    getHeroes():void {
@@ -45,6 +29,8 @@ constructor(private heroeService: HeroService, private messageService: MessageSe
 
 ///////////////////////////////////////////////////////////
 // practica que hicimos con sergio sobre modelos y servicios
+
+//  users: User[]; variable de la practica modelos y servicios de sergio
 
 //  constructor(private userService: UserService) { } Este contructor es el que usamos para llamar al servicio de la practica que hicimos con sergio sobre modelos y servicios
 
