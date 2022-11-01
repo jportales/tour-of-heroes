@@ -1,0 +1,10 @@
+<h2>ToDos</h2>
+
+<ul class="toDos">
+  <li *ngFor="let todo of toDos">
+    <div>
+      <span *ngIf="todo.userId"> {{toDosRanges[todo.userId]}}</span> 
+    </div>
+      <span class="badge" [ngClass]="{finalizado: todo.completed === true, noFinalizado: todo.completed === false}">Id: {{todo.id}}   Titulo:{{todo.title}}</span>
+  </li>
+</ul>

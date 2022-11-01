@@ -13,17 +13,17 @@ export class UserService {
   }
 
   getUsers(): Observable<User[]> {
-    const url = 'https://jsonplaceholder.typicode.com/users';
+    const url = 'api/users';
     return this.http.get<User[]>(url);
   }
   
   getUsersPromise(): Promise<User[]> { 
-    const url = 'https://jsonplaceholder.typicode.com/users';
+    const url = 'api/users';
     return firstValueFrom(this.http.get<User[]>(url));
   }
 
    getUsersPromiseAsync(): Promise<User[]> {     
-     const url = 'https://jsonplaceholder.typicode.com/users';
+     const url = 'api/users';
      return firstValueFrom(this.http.get<User[]>(url));
    }
 

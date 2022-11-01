@@ -21,7 +21,7 @@ constructor(private heroeService: HeroService) { }
    }
 
   getHeroes():void {
-    this.heroeService.getHeroes().subscribe(heroes => this.heroes = heroes);
+    this.heroeService.getHeroes().subscribe(data => this.heroes = data);
    }
 
   add(name: string): void {
@@ -46,9 +46,9 @@ constructor(private heroeService: HeroService) { }
 ///////////////////////////////////////////////////////////
 // practica que hicimos con sergio sobre modelos y servicios
 
-//  users: User[]; variable de la practica modelos y servicios de sergio
+//  users: User[]; //variable de la practica modelos y servicios de sergio
 
-//  constructor(private userService: UserService) { } Este contructor es el que usamos para llamar al servicio de la practica que hicimos con sergio sobre modelos y servicios
+//  constructor(private userService: UserService) { } //Este contructor es el que usamos para llamar al servicio de la practica que hicimos con sergio sobre modelos y servicios
 
   // ngOnInit(): void {
   //   this.getUsers();

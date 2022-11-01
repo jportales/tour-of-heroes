@@ -14,7 +14,8 @@ import { HeroDetailComponent } from './components/hero-detail/hero-detail.compon
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
-import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { HeroSearchComponent } from './components/hero-search/hero-search.component';
+import { ToDosComponent } from './components/to-dos/to-dos.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     MessagesComponent,
     DashboardComponent,
     HeroTypeComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    ToDosComponent
   ],
   imports: [
     BrowserModule,
