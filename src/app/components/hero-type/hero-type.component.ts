@@ -25,7 +25,7 @@ export class HeroTypeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSelectType(): void{
+  onSelectType(): void {
 
   }
 

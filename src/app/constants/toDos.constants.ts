@@ -1,12 +1,11 @@
 const toDos = {
-  Admin: 1,
-  moderator: 2,
+  ADMIN: 1,
+  MODERATOR: 2,
 };
 
 const toDosRanges = {
-  [toDos.Admin]: 'Administrador',
-  [toDos.moderator]: 'Moderador'
- 
+  [toDos.ADMIN]: 'Administrador',
+  [toDos.MODERATOR]: 'Moderador'
 }
 
 export {

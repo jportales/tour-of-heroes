@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
-import { ToDosComponent } from './components/to-dos/to-dos.component';
+import { ToDosComponent } from './components/to-dos-page/to-dos-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },

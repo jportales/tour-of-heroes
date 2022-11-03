@@ -26,7 +26,6 @@ export class UserService {
      const url = 'api/users';
      return firstValueFrom(this.http.get<User[]>(url));
    }
-
 }
 
 

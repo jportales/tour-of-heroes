@@ -1,0 +1,9 @@
+<div class="to-dos-page">
+
+  <h2>ToDos</h2>
+
+  <div 
+    *ngFor="let todo of toDos">
+    <app-task [id]="todo.id" [userId]="todo.userId" [title]="todo.title" [completed]="todo.completed"> </app-task>
+  </div>
+</div>
