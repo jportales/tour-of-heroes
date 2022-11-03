@@ -1,44 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './services/in-memory-data.service';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HeroTypeComponent } from './components/hero-type/hero-type.component';
-import { MessagesComponent } from './components/messages/messages.component';
-import { LabelComponent } from './components/label/label.component';
-import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
-import { HeroesComponent } from './components/heroes/heroes.component';
-import { HeroSearchComponent } from './components/hero-search/hero-search.component';
-import { ToDosComponent } from './components/to-dos-page/to-dos-page.component';
-import { TaskComponent } from './components/task/task.component';
+import { TasksModule } from './tasks/tasks.module';
+import { InMemoryDataService } from './shared/services/in-memory-data.service';
+import { SharedModule } from './shared/shared.module';
+import { HeroesModule } from './heroes/heroes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    LabelComponent,
-    HeroDetailComponent,
-    MessagesComponent,
-    DashboardComponent,
-    HeroTypeComponent,
-    HeroSearchComponent,
-    ToDosComponent,
-    TaskComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     CommonModule,
     HttpClientModule,
     AppRoutingModule,
     HttpClientModule,
-
+    TasksModule,
+    SharedModule,
+    HeroesModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false}
     )

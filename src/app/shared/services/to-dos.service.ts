@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { toDos } from 'src/app/tasks/models/toDos.model';
 
-import { toDos } from '../models/toDos.model';
 
 @Injectable({
   providedIn: 'root'

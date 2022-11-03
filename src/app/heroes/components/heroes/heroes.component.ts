@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero } from '../../models/hero.model';
-import { HeroService } from '../../services/hero.service';
-import { heroTypeNames } from '../../constants/hero.constants';
+import { HeroService } from 'src/app/shared/services/hero.service';
+import { heroTypeNames } from '../../constant/hero.constants';
+import { Hero } from '../../model/hero.model';
+
+
 
 @Component({
   selector: 'app-heroes',

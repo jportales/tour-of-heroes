@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ToDosService } from 'src/app/shared/services/to-dos.service';
+import { toDosRanges } from '../../constant/toDos.constants';
 
 import { toDos } from '../../models/toDos.model';
-import { ToDosService } from '../../services/to-dos.service';
-import { toDosRanges } from '../../constants/toDos.constants';
 
 @Component({
   selector: 'app-to-dos',

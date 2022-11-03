@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { toDosRanges } from '../../constant/toDos.constants';
 
-import { toDosRanges } from '../../constants/toDos.constants';
 
 @Component({
   selector: 'app-task',
@@ -15,10 +15,8 @@ export class TaskComponent implements OnInit {
   @Input() completed: boolean | undefined;
   toDosRanges = toDosRanges ;
 
-
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

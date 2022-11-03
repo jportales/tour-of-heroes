@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Hero } from '../../models/hero.model';
-import { heroTypes } from '../../constants/hero.constants';
-import { heroTypeNames } from '../../constants/hero.constants';
+import { heroTypeNames, heroTypes } from '../../constant/hero.constants';
+import { Hero } from '../../model/hero.model';
+
+
 
 @Component({
   selector: 'app-hero-type',
