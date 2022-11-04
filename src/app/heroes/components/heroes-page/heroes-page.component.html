@@ -2,7 +2,7 @@
 
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
-    <a routerLink="/detail/{{hero.id}}">
+    <a routerLink="/heroes/detail/{{hero.id}}">
       <span class="badge">{{hero.id}}</span> {{hero.name}} -
       <!-- <span *ngIf="hero.typeId"> - {{heroTypeNames[hero.typeId]}}</span> -->
       <app-hero-type [typeId]="hero.typeId"> </app-hero-type>
@@ -14,13 +14,13 @@
 </ul>
 
 <div>
-  <label for="new-hero">Hero name:</label>
-  <input id="new-hero" #heroName/>
-
-  <button type="button" class="add-button" (click)="add(heroName.value); 
-  heroName.value=''">
-    Add hero
-  </button>
+  <form id="heroesCreateForm" name="heroesCreateForm">
+    <label for="new-hero">Hero name:</label>
+    <!-- <input id="new-hero" [(ngModel)]]="newHeroName" />  opción A--> 
+    <input id="new-hero" name="new-hero" [(ngModel)]="newHero.name" /> <!--Opción B-->
+    <button type="button" class="add-button" 
+      (click)="onClickAddHero()">Add hero</button>
+</form>
 </div>
 
 <!--

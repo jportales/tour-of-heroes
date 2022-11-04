@@ -2,6 +2,6 @@
   <div [ngClass]="{finished: completed , notfinished: !completed}" class="to-dos_badge">
       <div [ngClass]="{admin: userId === 1}" *ngIf="userId"> {{toDosRanges[userId]}}</div>
       <div>Id: {{id}}</div>
-      <div>Titulo:{{title}}</div>
+      <div>Titulo: {{title}}</div>
   </div>
 </div>

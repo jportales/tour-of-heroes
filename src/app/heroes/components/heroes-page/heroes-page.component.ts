@@ -2,19 +2,24 @@ import { Component, OnInit } from '@angular/core';
 
 import { HeroService } from 'src/app/shared/services/hero.service';
 import { heroTypeNames } from '../../constant/hero.constants';
-import { Hero } from '../../model/hero.model';
+import { Hero } from '../../../models/hero.model';
 
 
 
 @Component({
   selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.scss']
+  templateUrl: './heroes-page.component.html',
+  styleUrls: ['./heroes-page.component.scss']
 })
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = [];
   heroTypeNames = heroTypeNames;
+  
+  //opcion A
+  newHeroName: string;
+  //opcion B ES LA MÁS CORRECTA, ya que así, se puede usar dando igual el modelo, con la A, tendrías que crear una variable para cada uno
+  newHero = new Hero();
 
 constructor(private heroeService: HeroService) { }
 
@@ -40,6 +45,10 @@ constructor(private heroeService: HeroService) { }
     this.heroeService.deleteHero(hero.id).subscribe();
   }
 
+  onClickAddHero(): void {
+    this.add(this.newHero.name); 
+    this.newHero.name = '';
+  }
 
   // onModelChange(name: string): void {
   //   // this.hero.name = name

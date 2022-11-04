@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map,tap } from 'rxjs/operators';
 
 import { MessageService } from './message.service';
-import { Hero } from 'src/app/heroes/model/hero.model';
+import { Hero } from 'src/app/models/hero.model';
 
 
 

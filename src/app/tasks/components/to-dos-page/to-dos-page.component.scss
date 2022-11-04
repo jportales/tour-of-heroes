@@ -1,4 +1,15 @@
 .to-dos-page {
   white-space: initial;
-  
+
+  &_tittle{
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &_task{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;// separación tanto de horizontal como vertical entre columna
+    flex-direction: row;
+  }
 }

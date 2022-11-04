@@ -1,9 +1,10 @@
 <div class="to-dos-page">
-
-  <h2>ToDos</h2>
-
-  <div 
-    *ngFor="let todo of toDos">
-    <app-task [id]="todo.id" [userId]="todo.userId" [title]="todo.title" [completed]="todo.completed"> </app-task>
+  <div>
+    <h2 class="to-dos-page_tittle">ToDos</h2>
+  </div>
+  <div class="to-dos-page_task">
+    <div *ngFor="let todo of toDos">
+      <app-task [id]="todo.id" [userId]="todo.userId" [title]="todo.title" [completed]="todo.completed"> </app-task>
+    </div>
   </div>
 </div>

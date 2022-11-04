@@ -4,11 +4,12 @@
     border-width: 1px;
     border-style: solid;
     width: 300px;
-    height: 75px;
+    height: 85px;
     text-align: center;
-    margin:4px;
+    border-radius: 25px;
   }
 }
+
 .notfinished {
 background-color: rgb(184, 102, 102);
 }
@@ -16,7 +17,6 @@ background-color: rgb(184, 102, 102);
 .finished {
 background-color: lightgreen;
 }
-
 
 .admin{
   font-weight: bold;

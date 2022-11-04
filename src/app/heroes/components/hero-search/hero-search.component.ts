@@ -3,7 +3,7 @@ import { Observable, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 
 import { HeroService } from 'src/app/shared/services/hero.service';
-import { Hero } from '../../model/hero.model';
+import { Hero } from '../../../models/hero.model';
 
 @Component({
   selector: 'app-hero-search',

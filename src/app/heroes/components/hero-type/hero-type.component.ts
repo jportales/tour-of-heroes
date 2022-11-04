@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { heroTypeNames, heroTypes } from '../../constant/hero.constants';
-import { Hero } from '../../model/hero.model';
+import { Hero } from '../../../models/hero.model';
 
 
 
