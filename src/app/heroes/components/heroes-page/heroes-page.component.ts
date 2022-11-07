@@ -16,6 +16,8 @@ export class HeroesComponent implements OnInit {
 
   @ViewChild('createHeroForm') createHeroForm: NgForm;
 
+  display: boolean = false;
+
   heroes: Hero[] = [];
   heroTypeNames = heroTypeNames;
  
@@ -23,6 +25,7 @@ export class HeroesComponent implements OnInit {
   newHeroName: string;
   //opcion B ES LA MÁS CORRECTA, ya que así, se puede usar dando igual el modelo, con la A, tendrías que crear una variable para cada uno
   newHero = new Hero();
+  
 
 constructor(private heroeService: HeroService) { }
 
@@ -51,7 +54,17 @@ constructor(private heroeService: HeroService) { }
   onSubmitAddHero(): void {
     this.add(this.newHero.name); 
     this.createHeroForm.resetForm();
+    this.display = false
   }
+
+  cancelModal(): void{
+    this.display = false;
+  }
+
+  showDialog() {
+    this.display = true;
+    this.createHeroForm.resetForm();
+}
 
 
   // onModelChange(name: string): void {

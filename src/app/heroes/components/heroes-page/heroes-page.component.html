@@ -13,15 +13,22 @@
   </li>
 </ul>
 
-<div>
-  <form (ngSubmit)="onSubmitAddHero()" #createHeroForm="ngForm" id="heroesCreateForm" name="heroesCreateForm">
-    <label for="new-hero">Hero name:</label>
-    <!-- <input id="new-hero" [(ngModel)]]="newHeroName" />  opción A--> 
-    <input id="new-hero" name="new-hero" required [(ngModel)]="newHero.name" /> <!--Opción B-->
-    <button type="submit" class="add-button" [disabled] = "createHeroForm.invalid"
-      >Add hero</button>
-  </form>
-</div>
+<p-dialog header="addHero" [(visible)]="display" [modal]="true" [transitionOptions]="'0ms'">
+  <div>
+    <form (ngSubmit)="onSubmitAddHero()" #createHeroForm="ngForm" id="heroesCreateForm" name="heroesCreateForm">
+      <label for="new-hero">Hero name:</label>
+      <!-- <input id="new-hero" [(ngModel)]]="newHeroName" />  opción A--> 
+      <input id="new-hero" name="new-hero" required [(ngModel)]="newHero.name" /> <!--Opción B-->
+      <button type="submit" class="add-button" [disabled] = "createHeroForm.invalid"
+        >Add hero</button>
+      <button type="button" class="add-button"  (click)= "cancelModal()"
+        >cancel</button>
+    </form>
+  </div>
+</p-dialog>
+
+
+<button type="button" (click)="showDialog()" icon="pi pi-times" label="Show">Add hero</button>
 
 <!--
 <div>
