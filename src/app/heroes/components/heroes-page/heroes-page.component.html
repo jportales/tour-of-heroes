@@ -14,12 +14,12 @@
 </ul>
 
 <div>
-  <form (ngSubmit)="onSubmit()" #heroForm="ngForm" id="heroesCreateForm" name="heroesCreateForm">
+  <form (ngSubmit)="onSubmitAddHero()" #createHeroForm="ngForm" id="heroesCreateForm" name="heroesCreateForm">
     <label for="new-hero">Hero name:</label>
     <!-- <input id="new-hero" [(ngModel)]]="newHeroName" />  opción A--> 
-    <input id="new-hero" name="new-hero" [(ngModel)]="newHero.name" /> <!--Opción B-->
-    <button type="submit" class="add-button" [disabled] = "!newHero.name"
-      (click)="onClickAddHero()">Add hero</button>
+    <input id="new-hero" name="new-hero" required [(ngModel)]="newHero.name" /> <!--Opción B-->
+    <button type="submit" class="add-button" [disabled] = "createHeroForm.invalid"
+      >Add hero</button>
   </form>
 </div>
 

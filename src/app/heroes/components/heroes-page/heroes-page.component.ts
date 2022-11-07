@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { HeroService } from 'src/app/shared/services/hero.service';
 import { heroTypeNames } from '../../constant/hero.constants';
 import { Hero } from '../../../models/hero.model';
+import { NgForm } from '@angular/forms';
 
 
 
@@ -13,10 +14,11 @@ import { Hero } from '../../../models/hero.model';
 })
 export class HeroesComponent implements OnInit {
 
+  @ViewChild('createHeroForm') createHeroForm: NgForm;
+
   heroes: Hero[] = [];
   heroTypeNames = heroTypeNames;
-  submitted = false;
-  
+ 
   //opcion A
   newHeroName: string;
   //opcion B ES LA MÁS CORRECTA, ya que así, se puede usar dando igual el modelo, con la A, tendrías que crear una variable para cada uno
@@ -46,12 +48,11 @@ constructor(private heroeService: HeroService) { }
     this.heroeService.deleteHero(hero.id).subscribe();
   }
 
-  onClickAddHero(): void {
+  onSubmitAddHero(): void {
     this.add(this.newHero.name); 
-    this.newHero.name = '';
+    this.createHeroForm.resetForm();
   }
 
-  onSubmit() { this.submitted = true; }
 
   // onModelChange(name: string): void {
   //   // this.hero.name = name
