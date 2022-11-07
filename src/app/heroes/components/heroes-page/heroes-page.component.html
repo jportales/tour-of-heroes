@@ -14,13 +14,13 @@
 </ul>
 
 <div>
-  <form id="heroesCreateForm" name="heroesCreateForm">
+  <form (ngSubmit)="onSubmit()" #heroForm="ngForm" id="heroesCreateForm" name="heroesCreateForm">
     <label for="new-hero">Hero name:</label>
     <!-- <input id="new-hero" [(ngModel)]]="newHeroName" />  opción A--> 
     <input id="new-hero" name="new-hero" [(ngModel)]="newHero.name" /> <!--Opción B-->
-    <button type="button" class="add-button" 
+    <button type="submit" class="add-button" [disabled] = "!newHero.name"
       (click)="onClickAddHero()">Add hero</button>
-</form>
+  </form>
 </div>
 
 <!--

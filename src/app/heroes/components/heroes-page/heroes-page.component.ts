@@ -15,6 +15,7 @@ export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = [];
   heroTypeNames = heroTypeNames;
+  submitted = false;
   
   //opcion A
   newHeroName: string;
@@ -49,6 +50,8 @@ constructor(private heroeService: HeroService) { }
     this.add(this.newHero.name); 
     this.newHero.name = '';
   }
+
+  onSubmit() { this.submitted = true; }
 
   // onModelChange(name: string): void {
   //   // this.hero.name = name
