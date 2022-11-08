@@ -3,7 +3,7 @@
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: 15em;
+  // width: 15em;
 }
 
 input {
@@ -26,18 +26,18 @@ input {
 .heroes a {
   color: #333;
   text-decoration: none;
-  background-color: #EEE;
+  background-color: rgb(74, 196, 253);
   margin: .5em;
   padding: .3em 0;
-  height: 1.6em;
+  height: 40px;
   border-radius: 4px;
   display: block;
   width: 100%;
 }
 
 .heroes a:hover {
-  color: #2c3a41;
-  background-color: #e6e6e6;
+  color: #ebeef0;
+  background-color: #4d29ce;
 }
 
 .heroes a:active {
@@ -55,7 +55,7 @@ input {
   position: relative;
   left: -1px;
   top: -4px;
-  height: 1.8em;
+  height: 40px;
   min-width: 16px;
   text-align: right;
   margin-right: .8em;
@@ -75,8 +75,8 @@ input {
 
 button.delete {
   position: absolute;
-  left: 210px;
-  top: 5px;
+  left: 230px;
+  top: 12px;
   background-color: white;
   color:  #525252;
   font-size: 1.1rem;
