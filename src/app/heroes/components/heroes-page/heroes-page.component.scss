@@ -57,31 +57,8 @@
               background-color: var(--color-1-dark);
             }
           }
-
-          &_delete {
-            background-color: transparent;
-            color: var(--color-black);
-            font-size: 1.1rem;
-            margin: 0;
-            padding: 1px 10px 3px 10px;
-            margin-left: auto;
-          }
-          
-          &_delete:hover {
-            background-color: hsla(211, 20%, 32%);
-            color: var(--color-white);
-          }
         }
       }
-    }
-  }
-
-  &_addHero {
-    margin-left: 45%;
-    margin-top: 10em;
-    
-    &_buttonAddHero {
-      background-color: red;
     }
   }
 
@@ -93,17 +70,6 @@
       padding: .5rem;
       margin: 1rem 0;
       box-sizing: border-box;
-    }
-
-    &_add-button {
-      padding: .5rem 1.5rem;
-      font-size: 1rem;
-      margin-bottom: 2rem;
-    }
-    
-    &_add-button:hover {
-      color: var(--color-white);
-      background-color: var(--color-black);
     }
   }
 

@@ -15,7 +15,7 @@
             <app-hero-type [typeId]="hero.typeId"> </app-hero-type>
             <!-- <app-hero-type [typeId]="hero.typeId?"> </app-hero-type> ESTE VA CON  @Input() typeId: number-->
           </a>
-          <button type="button" class="hero-page_container_row_for-hero_hero_delete" tittle="delete hero" (click)="delete(hero)">x</button>
+          <button type="button" class="hero-page_container_row_for-hero_hero_delete delete-button" tittle="delete hero" (click)="delete(hero)">x</button>
         </div>
       </div>
     </div>
@@ -28,10 +28,10 @@
         <!-- <input id="new-hero" [(ngModel)]]="newHeroName" />  opción A-->
         <input class="hero-page_dialog_input" id="new-hero" name="new-hero" required [(ngModel)]="newHero.name" />
         <!--Opción B-->
-        <button type="submit" class="hero-page_dialog_add-button" [disabled]="createHeroForm.invalid">
+        <button type="submit" class="hero-page_dialog_add-button add-button" [disabled]="createHeroForm.invalid">
           Add hero
         </button>
-        <button type="button" class="hero-page_dialog_add-button" (click)="cancelModal()">
+        <button type="button" class="hero-page_dialog_add-button add-button" (click)="cancelModal()">
           cancel
         </button>
       </form>
