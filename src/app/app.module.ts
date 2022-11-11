@@ -18,6 +18,7 @@ import { HeroesModule } from './heroes/heroes.module';
   declarations: [
     AppComponent,
     DashboardComponent
+    
   ],
   imports: [
     BrowserModule,

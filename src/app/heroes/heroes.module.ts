@@ -9,6 +9,7 @@ import { HeroDetailComponent } from './components/hero-detail/hero-detail.compon
 import { MessagesComponent } from '../shared/component/messages/messages.component';
 import { HeroTypeComponent } from './components/hero-type/hero-type.component';
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
+import { HeroTableComponent } from './components/hero-table/hero-table.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HeroSearchComponent } from './components/hero-search/hero-search.compon
     HeroDetailComponent,
     MessagesComponent,
     HeroTypeComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    HeroTableComponent
   ],
   imports: [
     CommonModule,

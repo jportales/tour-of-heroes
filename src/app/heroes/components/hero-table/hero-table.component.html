@@ -1,0 +1,208 @@
+<div class="card">
+  <h2>RESIZE</h2>
+    <p-table [value]="heroes" [resizableColumns]="true" styleClass="p-datatable-gridlines"
+      [tableStyle]="{'min-width': '50rem'}">
+      <ng-template pTemplate="header">
+        <tr>
+          <th pResizableColumn>Id</th>
+          <th pResizableColumn>Name</th>
+          <th pResizableColumn>Type Id</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-hero>
+        <tr>
+          <td>{{hero.id}}</td>
+          <td>{{hero.name}}</td>
+          <td>{{hero.typeId}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+</div>
+
+<div class="card">
+  <h2>Page</h2>
+    <p-table [value]="heroes" [paginator]="true" [rows]="5" [showCurrentPageReport]="true"
+      [tableStyle]="{'min-width': '50rem'}"
+      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+      [rowsPerPageOptions]="[5,10,25,50]">
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="width:25%">Id</th>
+          <th style="width:25%">Name</th>
+          <th style="width:25%">Type Id</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-hero>
+        <tr>
+          <td>{{hero.id}}</td>
+          <td>{{hero.name}}</td>
+          <td>{{hero.typeId}}</td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="paginatorleft">
+        <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+      </ng-template>
+      <ng-template pTemplate="paginatorright">
+        <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+      </ng-template>
+    </p-table>
+</div>
+
+<div class="card">
+  <h2>Sort single</h2>
+    <p-table [value]="heroes" [tableStyle]="{'min-width': '60rem'}">
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="id" style="width:20%">Id<p-sortIcon field="id"></p-sortIcon>
+          </th>
+          <th pSortableColumn="name" style="width:20%">Name<p-sortIcon field="name"></p-sortIcon>
+          </th>
+          <th pSortableColumn="typeId" style="width:20%">TypeId<p-sortIcon field="typeId"></p-sortIcon>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-hero>
+        <tr>
+          <td>{{hero.id}}</td>
+          <td>{{hero.name}}</td>
+          <td>{{hero.typeId}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+</div>
+
+<div class="card">
+  <h2>Sort multiple</h2>
+    <p-table [value]="heroes" sortMode="multiple" [tableStyle]="{'min-width': '60rem'}">
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="id" style="width:20%">Id<p-sortIcon field="id"></p-sortIcon>
+          </th>
+          <th pSortableColumn="name" style="width:20%">Name<p-sortIcon field="name"></p-sortIcon>
+          </th>
+          <th pSortableColumn="typeId" style="width:20%">TypeId<p-sortIcon field="typeId"></p-sortIcon>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-hero>
+        <tr>
+          <td>{{hero.id}}</td>
+          <td>{{hero.name}}</td>
+          <td>{{hero.typeId}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+</div>
+
+<div class="card">
+  <h2>Sort multiple</h2>
+    <p-table [value]="heroes" sortMode="multiple" [tableStyle]="{'min-width': '60rem'}">
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="id" style="width:20%">Id<p-sortIcon field="id"></p-sortIcon>
+          </th>
+          <th pSortableColumn="name" style="width:20%">Name<p-sortIcon field="name"></p-sortIcon>
+          </th>
+          <th pSortableColumn="typeId" style="width:20%">TypeId<p-sortIcon field="typeId"></p-sortIcon>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-hero>
+        <tr>
+          <td>{{hero.id}}</td>
+          <td>{{hero.name}}</td>
+          <td>{{hero.typeId}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+</div>
+
+<div class="card">
+  <h2>Sort multiple</h2>
+    <p-table [value]="heroes" sortMode="multiple" [tableStyle]="{'min-width': '60rem'}">
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="id" style="width:20%">Id<p-sortIcon field="id"></p-sortIcon>
+          </th>
+          <th pSortableColumn="name" style="width:20%">Name<p-sortIcon field="name"></p-sortIcon>
+          </th>
+          <th pSortableColumn="typeId" style="width:20%">TypeId<p-sortIcon field="typeId"></p-sortIcon>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-hero>
+        <tr>
+          <td>{{hero.id}}</td>
+          <td>{{hero.name}}</td>
+          <td>{{hero.typeId}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+</div>
+
+<div class="card">
+  <h2>Dynamic</h2>
+    <p-table [columns]="cols" [value]="heroes" [tableStyle]="{'min-width': '50rem'}">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of columns">
+            {{col.header}}
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+          <td *ngFor="let col of columns">
+            {{rowData[col.field]}}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+</div>
+
+<div class="card">
+  <h2>Selection Syngle</h2>
+  <p-table [value]="heroes" selectionMode="single" [(selection)]="selectedProduct1" dataKey="id"
+    [tableStyle]="{'min-width': '50rem'}">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Type Id</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-hero>
+      <tr [pSelectableRow]="hero">
+        <td>{{hero.id}}</td>
+        <td>{{hero.name}}</td>
+        <td>{{hero.typeId}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+<div class="card">
+  <h5>Column Selection</h5>
+  <p-table [value]="heroes" [tableStyle]="{'min-width': '50rem'}">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>TypeId</th>
+        <th style="width: 5rem"></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-hero>
+      <tr>
+        <td>{{hero.id}}</td>
+        <td>{{hero.name}}</td>
+        <td>{{hero.typeId}}</td>
+        <td>
+          <button type="button" pButton pRipple icon="pi pi-search" (click)="selectHero(hero)"></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+<p-messages></p-messages>

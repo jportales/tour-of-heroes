@@ -1,5 +1,5 @@
 <div class="hero-page">
-  
+
   <div class="hero-page_title">
     <h2>My Heroes</h2>
   </div>
@@ -9,13 +9,14 @@
       <div class="hero-page_container_row_for-hero col-12 col-md-6 col-lg-3" *ngFor="let hero of heroes">
         <div class="hero-page_container_row_for-hero_hero">
           <span class="hero-page_container_row_for-hero_hero_badge">{{hero.id}}</span>
-          <a class="hero-page_container_row_for-hero_hero_badge_hero" routerLink="/heroes/detail/{{hero.id}}"> 
-          <span>{{hero.name}} -</span>
+          <a class="hero-page_container_row_for-hero_hero_badge_hero" routerLink="/heroes/detail/{{hero.id}}">
+            <span>{{hero.name}} -</span>
             <!-- <span *ngIf="hero.typeId"> - {{heroTypeNames[hero.typeId]}}</span> -->
             <app-hero-type [typeId]="hero.typeId"> </app-hero-type>
             <!-- <app-hero-type [typeId]="hero.typeId?"> </app-hero-type> ESTE VA CON  @Input() typeId: number-->
           </a>
-          <button type="button" class="hero-page_container_row_for-hero_hero_delete delete-button" tittle="delete hero" (click)="delete(hero)">x</button>
+          <button type="button" class="hero-page_container_row_for-hero_hero_delete delete-button" tittle="delete hero"
+            (click)="delete(hero)">x</button>
         </div>
       </div>
     </div>
@@ -39,8 +40,19 @@
   </p-dialog>
 
   <div class="hero-page_addHero">
-    <button class="hero-page_addHero_buttonAddHero" type="button" (click)="showDialog()" icon="pi pi-times" label="Show">Add hero</button>
+    <button class="hero-page_addHero_buttonAddHero" type="button" (click)="showDialog()" icon="pi pi-times"
+      label="Show">Add hero</button>
   </div>
+
+  <app-hero-table></app-hero-table>
+
+
+  <!-- <div class="hero-page_for-hero" *ngFor="let hero of heroes">
+    <div>
+      <app-hero-table [hero]="hero"></app-hero-table>
+    </div>
+  </div> -->
+
 </div>
 <!--
 <div>
